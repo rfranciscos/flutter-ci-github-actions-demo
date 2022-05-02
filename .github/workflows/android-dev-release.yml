@@ -52,8 +52,8 @@ jobs:
         run: sed -i 's/#{KEYSTORE_KEY_PASS}#/${{ secrets.KEYSTORE_KEY_PASS }}/g' android/key.properties
       - name: Commit and push changes
         run: |
-         git config --global user.name "your username"
-         git config --global user.email "your email"
+         git config --global user.name "rfranciscos"
+         git config --global user.email "renan.soares.francisco@gmail.com"
          git add -A
          git commit -m "commit message"
          git push origin HEAD:master
