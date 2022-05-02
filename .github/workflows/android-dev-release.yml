@@ -23,13 +23,12 @@ jobs:
       - name: Update version in YAML
         run: perl -i -pe 's/((version:\s)+\d+\.\d+\.\d+)(\+\d+)?/$2 ${{  github.event.inputs.version }}/g' pubspec.yaml
       - name: Commit changes
-        uses: mikeal/publish-to-github-action@master
+        uses: mikeal/publish-to-github-action@1.0.0
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
       - name: Create a Release in GitHub
         uses: ncipollo/release-action@v1
         with:
-          token: ${{ secrets.GH_TOKEN }}
           tag: ${{ github.event.inputs.version }}
           commit: ${{ github.sha }}
           prerelease: true
