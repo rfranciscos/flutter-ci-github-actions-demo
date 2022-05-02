@@ -17,7 +17,7 @@ jobs:
       - name: Update version in YAML
         run: perl -i -pe 's/((version:\s)+\d+\.\d+\.\d+)(\+\d+)?/$2 ${{  github.event.inputs.version }}/g' pubspec.yaml
       - name: Commit changes
-      - uses: EndBug/add-and-commit@v9 # You can change this to use a specific version.
+        uses: EndBug/add-and-commit@v9 # You can change this to use a specific version.
         with:
           author_name: 'Biscoint Bot'
           author_email: bot@biscoint.io
