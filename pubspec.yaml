@@ -2,7 +2,7 @@ name: demo_flutter_app
 description: A new Flutter project.
 
 publish_to: 'none'
-version: 99.99.99+99
+version: 22.33.44+98
 
 environment:
   sdk: ">=2.7.0 <3.0.0"
